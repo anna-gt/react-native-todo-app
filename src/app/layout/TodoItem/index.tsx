@@ -5,6 +5,8 @@ import { COLORS } from "@/app/constants/ui";
 import { Todo } from "@/app/types/todo";
 import { useState } from "react";
 import { StyleSheet, Vibration, View } from "react-native";
+import EditTodoModal from "../Modals/EditTodoModal";
+import DeleteTodoModal from "../Modals/DeleteTodoModal";
 
 type TodoItemProps = Todo & {
   onCheck: (id: Todo["id"]) => void;
@@ -54,23 +56,23 @@ const TodoItem: React.FC<TodoItemProps> = ({
       </View>
       <View style={styles.controlsContainer}>
         <StyledButton icon="edit" size="small" onPress={onPressEdit} />
-        {/* <EditTodoModal
+        <EditTodoModal
           title={title}
           isOpen={isEditModalOpen}
           onClose={() => setIsEditModalOpen(false)}
           onUpdate={(title) => onUpdateTitle(id, title)}
-        /> */}
+        />
         <StyledButton
           icon="delete"
           size="small"
           variant="delete"
           onPress={onPressDelete}
         />
-        {/* <DeleteTodoModal
+        <DeleteTodoModal
           isOpen={isDeleteModalOpen}
           onClose={() => setIsDeleteModalOpen(false)}
           onDelete={onConfirmDelete}
-        /> */}
+        />
       </View>
     </View>
   );
