@@ -3,7 +3,7 @@ import StyledModal from "@/app/components/StyledModal";
 import StyledText from "@/app/components/StyledText";
 import StyledTextInput from "@/app/components/StyledTextInput";
 import { Todo } from "@/app/types/todo";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { StyleSheet, View } from "react-native";
 
 type EditTodoModalProps = {
@@ -31,31 +31,37 @@ const EditTodoModal: React.FC<EditTodoModalProps> = ({
     onClose();
   };
 
-  useEffect(() => {
-    if (inputError && updatedTitle) {
+  const onChangeText = (text: string) => {
+    if (inputError && text) {
       setInputError(false);
     }
-  }, [updatedTitle]);
+    setUpdateTitle(text);
+  };
 
-  useEffect(() => {
+  const onCloseModal = () => {
     setUpdateTitle(title);
-  }, [isOpen])
+    onClose();
+  };
 
   return (
-    <StyledModal isOpen={isOpen} onClose={onClose}>
+    <StyledModal isOpen={isOpen} onClose={onCloseModal}>
       <View style={styles.modalContentContainer}>
         <StyledText variant="heading">Edit todo</StyledText>
         <View style={styles.inputContainer}>
           <StyledTextInput
             value={updatedTitle}
-            onChangeText={setUpdateTitle}
+            onChangeText={onChangeText}
             placeholder="Edit todo..."
             isError={inputError}
           />
         </View>
         <View style={styles.buttonsContainer}>
           <StyledButton label="Cancel" onPress={onClose} variant="secondary" />
-          <StyledButton label="Save" onPress={onPressSave} disabled={inputError} />
+          <StyledButton
+            label="Save"
+            onPress={onPressSave}
+            disabled={inputError}
+          />
         </View>
       </View>
     </StyledModal>
