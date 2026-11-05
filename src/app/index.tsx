@@ -1,9 +1,9 @@
 import { StatusBar, StyleSheet, View } from "react-native";
-import { COLORS } from "./constants/ui";
-import useTodo from "./hooks/useTodo";
-import Header from "./layout/Header";
-import TodoCreator from "./layout/TodoCreator";
-import TodoList from "./layout/TodoList";
+import { COLORS } from "../../constants/ui";
+import Header from "../../layout/Header";
+import TodoCreator from "../../layout/TodoCreator";
+import TodoList from "../../layout/TodoList";
+import useTodo from "../../hooks/useTodo";
 
 export default function Index() {
   const {

@@ -1,6 +1,6 @@
-import { Todo } from "@/app/types/todo";
 import React from "react";
 import { FlatList, View } from "react-native";
+import { Todo } from "../../types/todo";
 import TodoItem from "../TodoItem";
 
 type TodoListProps = {
@@ -10,7 +10,12 @@ type TodoListProps = {
   onUpdateTitle: (id: Todo["id"], title: Todo["title"]) => void;
 };
 
-const TodoList: React.FC<TodoListProps> = ({ todos, onCheckTodo, onPressDelete, onUpdateTitle }) => {
+const TodoList: React.FC<TodoListProps> = ({
+  todos,
+  onCheckTodo,
+  onPressDelete,
+  onUpdateTitle,
+}) => {
   return (
     <View>
       <FlatList

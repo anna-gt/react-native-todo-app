@@ -1,7 +1,7 @@
-import StyledText from "@/app/components/StyledText";
-import { COLORS } from "@/app/constants/ui";
-import { getFullFormattedDate } from "@/app/helpers/date";
+import { getFullFormattedDate } from "../../helpers/date";
 import { StyleSheet, View } from "react-native";
+import { COLORS } from "../../constants/ui";
+import StyledText from "../../components/StyledText";
 
 type HeaderProps = {
   totalTodos: number;

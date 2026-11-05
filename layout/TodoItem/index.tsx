@@ -1,12 +1,12 @@
-import StyledButton from "@/app/components/StyledButton";
-import StyledCheckbox from "@/app/components/StyledCheckbox";
-import StyledText from "@/app/components/StyledText";
-import { COLORS } from "@/app/constants/ui";
-import { Todo } from "@/app/types/todo";
 import { useState } from "react";
 import { StyleSheet, Vibration, View } from "react-native";
-import EditTodoModal from "../Modals/EditTodoModal";
+import { COLORS } from "../../constants/ui";
+import { Todo } from "../../types/todo";
 import DeleteTodoModal from "../Modals/DeleteTodoModal";
+import EditTodoModal from "../Modals/EditTodoModal";
+import StyledCheckbox from "../../components/StyledCheckbox";
+import StyledText from "../../components/StyledText";
+import StyledButton from "../../components/StyledButton";
 
 type TodoItemProps = Todo & {
   onCheck: (id: Todo["id"]) => void;

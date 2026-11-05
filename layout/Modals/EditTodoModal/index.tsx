@@ -2,9 +2,9 @@ import StyledButton from "@/app/components/StyledButton";
 import StyledModal from "@/app/components/StyledModal";
 import StyledText from "@/app/components/StyledText";
 import StyledTextInput from "@/app/components/StyledTextInput";
-import { Todo } from "@/app/types/todo";
 import { useState } from "react";
 import { StyleSheet, View } from "react-native";
+import { Todo } from "../../../types/todo";
 
 type EditTodoModalProps = {
   isOpen: boolean;
