@@ -1,6 +1,6 @@
-import StyledButton from "@/app/components/StyledButton";
-import StyledModal from "@/app/components/StyledModal";
-import StyledText from "@/app/components/StyledText";
+import StyledButton from "@/components/StyledButton";
+import StyledModal from "@/components/StyledModal";
+import StyledText from "@/components/StyledText";
 import { Modal, StyleSheet, View } from "react-native";
 
 type DeleteTodoModalProps = {

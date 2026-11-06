@@ -1,8 +1,8 @@
-import StyledButton from "@/app/components/StyledButton";
-import StyledTextInput from "@/app/components/StyledTextInput";
 import React, { useState } from "react";
 import { Keyboard, StyleSheet, View } from "react-native";
 import { Todo } from "../../types/todo";
+import StyledTextInput from "@/components/StyledTextInput";
+import StyledButton from "@/components/StyledButton";
 
 type TodoCreatorProps = {
   onAddTodo: (title: Todo["title"]) => void;

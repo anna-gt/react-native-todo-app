@@ -1,7 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useEffect, useState } from "react";
-import { STORAGE_KEY } from "../../../constants/storage";
-import { Todo } from "../types/todo";
+import { Todo } from "@/types/todo";
+import { STORAGE_KEY } from "@/constants/storage";
 
 const defaultTodos: Todo[] = [
   { id: 1, title: "Learn React Native!", isCompleted: false },
