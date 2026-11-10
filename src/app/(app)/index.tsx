@@ -4,6 +4,7 @@ import Header from "@/layout/Header";
 import TodoCreator from "@/layout/TodoCreator";
 import TodoList from "@/layout/TodoList";
 import { StatusBar, StyleSheet, View } from "react-native";
+
 export default function Index() {
   const {
     onAddTodo,
