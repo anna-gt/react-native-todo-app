@@ -34,6 +34,17 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
         }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/android-icon-monochrome.png",
+          "largeIcon": "./assets/images/android-icon-monochrome.png",
+          "color": "#ffffff",
+          "defaultChannel": "default",
+          "enableRemoteNotifications": true,
+          "enableBackgroundRemoteNotifications": false
+        }
       ]
     ],
     "experiments": {
