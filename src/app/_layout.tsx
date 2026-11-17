@@ -56,25 +56,6 @@ function useNotificationObserver() {
   }, []);
 }
 
-// function useNotificationObserver() {
-//   const response = Notifications.useLastNotificationResponse();
-
-//   useEffect(() => {
-//     if (
-//       response?.actionIdentifier !== Notifications.DEFAULT_ACTION_IDENTIFIER
-//     ) {
-//       return;
-//     }
-
-//     const url = response.notification.request.content.data?.url;
-
-//     if (typeof url === "string") {
-//       router.push(url as "/notes");
-//       void Notifications.clearLastNotificationResponseAsync();
-//     }
-//   }, [response]);
-// }
-
 export default function RootLayout() {
   useNotificationObserver();
 
